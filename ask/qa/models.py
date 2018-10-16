@@ -18,9 +18,9 @@ class Question(models.Model):
     title = models.CharField(max_length=500, null=False, blank=False)
     text = models.TextField(null=False, blank=False)
     added_at = models.DateTimeField()
-    rating = models.FloatField(null=True, blank=True)
+    rating = models.IntegerField(null=True, blank=True)
     author = models.ForeignKey(User)
-    likes = models.ManyToManyField(User, null=True, related_name='users_like')
+    likes = models.ManyToManyField(User, related_name='users_like')
 
     new = NewQuestionManager()
     popular = PopularQuestionManager()
