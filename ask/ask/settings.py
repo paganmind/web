@@ -80,7 +80,7 @@ DATABASES = {
         'NAME':'db_web',
         'USER': 'wepwawet',
         'PASSWORD': 'password'
-	'OPTIONS': 
+	'OPTIONS': { 
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
 	}
     }
